@@ -12,7 +12,8 @@
 # greeting= "Hello Homie"
 # my_name = "Jarvis"
 # my_age = "29"
-# welcome1 =(${greeting} + ${my_name} + '!!  I hear that you are' + ${my_age} 'today!')
+# welcome1 =(${greeting} + ${my_name} + '!!  I hear that you are' + ${my_age} + 'today!')
+# # you are trying to do JS string templating
 # welcome2 = f'{greeting} {my_name} !!!  I hear that you are  {my_age} today!'
 # print(welcome1)
 # print(welcome2)
@@ -22,9 +23,10 @@
 # ### Problem 2:
 # Write some Python code that asks the user for a secret password. Create a loop that quits with the user's quit word. If the user doesn't enter that word, ask them to guess again.
 #
-# secret_word = input("Enter a secret word ")
-# while (secret_word.lower() != 'blue'):
-#     secret_word = input("Enter a secret word ")
+secret_word = input("Enter a secret word ")
+# the quit word should be define by the user not hard coded
+while (secret_word.lower() != 'blue'):
+    secret_word = input("Enter a secret word ")
 
 #
 # ### Problem 3:
@@ -41,9 +43,9 @@
 # ```
 
 
-# x = range(0,50+1,1)
-# for n in x:
-#     print(f'{n}  {n}  {n}')
+x = range(0,50+1,1)
+for n in x:
+    print(f'{n}  {n}  {n}')
 
 
 
@@ -57,6 +59,7 @@ rand_num = random.randint(1,5)
 rand_guess = " "
 while rand_num != rand_guess:
     rand_guess = int(input("enter a guess 1-5 "))
+     # this is redundant
     if rand_num != rand_guess:
         print('try again')
 else:
